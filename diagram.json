@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-mega", "id": "mega", "top": 48.6, "left": -3.6, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 323,
+      "left": 249.6,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn2",
+      "top": 323,
+      "left": 144,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-led-ring",
+      "id": "ring1",
+      "top": -152.96,
+      "left": 106.79,
+      "attrs": { "pixels": "16" }
+    }
+  ],
+  "connections": [
+    [ "btn1:1.l", "btn2:1.r", "green", [ "h0" ] ],
+    [ "mega:GND.3", "btn1:1.l", "black", [ "v64.5", "h69.45" ] ],
+    [ "btn1:2.r", "mega:30", "blue", [ "h96.2", "v-268.6", "h-55.4" ] ],
+    [ "btn2:2.r", "mega:31", "magenta", [ "v29", "h182.6", "v-279.4" ] ],
+    [ "ring1:VCC", "mega:5V", "red", [ "v19.2", "h-86.4", "v163.2", "h74.5" ] ],
+    [ "ring1:DIN", "mega:48", "gold", [ "v0" ] ],
+    [ "ring1:GND", "mega:GND.1", "black", [ "h-48", "v57.6" ] ]
+  ],
+  "dependencies": {}
+}
